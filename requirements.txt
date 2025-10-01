@@ -1,5 +1,7 @@
 requests
 beautifulsoup4
-logging
 docling
 pypdfium2
+chromadb
+langchain-openai
+python-dotenv

@@ -155,10 +155,15 @@ def remove_ocr_footnotes(text: str) -> str:
 	return re.sub(r"^\s*\d+\s+[A-ZÀ-Ỹ].*$", "", text, flags=re.MULTILINE)
 
 
-def normalize_markdown_pipeline(text: str) -> str:
+def normalize_markdown_pdfs(text: str) -> str:
 	text = normalize_unicode_artifacts(text)
 	text = keep_vietnamese_header_and_tomtat(text)
 	text = remove_tail_sections(text)
 	text = remove_noise(text)
 	text = remove_ocr_footnotes(text)
+	return text
+
+
+def normalize_markdown_urls(text: str) -> str:
+	text = remove_noise(text)
 	return text

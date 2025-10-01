@@ -1,2 +1,10 @@
 /documents_pdf
 /documents_url.txt
+.env
+/chroma_db
+# Python bytecode
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
